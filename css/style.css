@@ -1,0 +1,169 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+/*--Меняет отсчёт ширины блока для более удобной вёрстки--*/
+*,
+*::before,
+*::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*--Убирает линии обводки у некоторых браузеров--*/
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+/*--Делает теги блочными--*/
+header,
+nav,
+aside,
+footer {
+  display: block;
+}
+
+/*--Параметры, которые уравнивают поведение шрифтов и элементов для разных браузеров--*/
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*--Наследование семейства шрифта тегами формы(по умолчанию не наследуют)--*/
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+/*--Данные параметры убирают некоторые особенности в разных браузерах--*/
+input::-ms-clear {
+  display: none;
+}
+button {
+  background: transparent;
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+/*--Обнуление заголовков--*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-size: inherit;
+  font-weight: 400;
+}
+/*******************************/
+
+@font-face {
+}
+/*******************************/
+:root {
+  --bg-header: #635854;
+  --color-nav-link: #fff;  
+  --border-color: #3596f5;
+}
+/*******************************/
+body {
+  font-family: 'Roboto', sans-serif;
+}
+.flex {
+  display: flex;
+}
+.wrapper {
+  flex-direction: column;
+  min-height: 100%;
+  overflow: hidden;
+}
+/*******************************/
+
+/**header***/
+.header {
+  background-color: var(--bg-header);
+  padding: 12px 0;
+  border-bottom: 4px solid var(--border-color);
+}
+.navbar {
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+.navbar-menu {
+  align-items: center;
+  text-align: center;
+}
+.navbar-item {
+  margin-right: 80px;
+}
+.navbar-item:last-child {
+  margin: 0;
+}
+.navbar-link {
+  color: var(--color-nav-link);
+}
+.navbar-contacts {
+  text-align: right;
+}
+.navbar-text {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  line-height: 16px;
+  color: var(--color-nav-link);
+}
+.navbar-phone {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 20px;
+  color: var(--color-nav-link);
+}
+
+/**main***/
+.main {
+  flex: 1 1 auto;
+}
+
+/*-SECTION_1--*/
+
+/*-SECTION_1--*/
+
+/*-SECTION_1--*/
+
+/**footer***/
+.footer {
+}
