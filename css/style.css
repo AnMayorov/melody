@@ -90,6 +90,13 @@ h6 {
 /*******************************/
 
 @font-face {
+  font-family: 'Bebas Neue';
+    src: local('Bebas Neue Regular Regular'), local('BebasNeueRegular'),
+        url('../fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('../fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 /*******************************/
 :root {
@@ -156,13 +163,140 @@ body {
 /**main***/
 .main {
   flex: 1 1 auto;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 54px 15px;
 }
 
-/*-SECTION_1--*/
+.home-image path {
+  opacity: 0;
+  cursor: pointer;
+}
+.home-image path:hover {
+  opacity: 1;
+}
 
-/*-SECTION_1--*/
+path.current-floor {
+  opacity: 1;
+}
 
-/*-SECTION_1--*/
+.main-info {
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  justify-content: space-between;
+  margin-left: 122px;
+  padding: 60px 0;
+  height: 640px;
+}
+.main-title {
+  font-family: 'Bebas Neue', serif;
+  font-size: 37px;
+  line-height: 44px;
+  color: var(--bg-header);
+  text-transform: uppercase;
+}
+.counter-group {
+  flex-direction: column;
+  align-items: center;
+}
+.floor-counter {
+  margin: 70px 0;
+  font-family: 'Bebas Neue', serif;
+  font-size: 124px;
+  color: var(--bg-header);
+}
+.button-primary {
+  padding: 16px 36px;
+  border-radius: 6px;
+  background: var(--border-color);
+  color: var(--color-nav-link);
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.2s;
+}
+.is-open {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.modal-dialog {
+  position: relative;
+  display: flex;
+  max-width: 1000px;
+  min-height: 565px;
+  background-color: #fff;
+  flex-grow: 1;
+  opacity: 0;
+  transform: translateY(-10%);
+  transition: transform 0.2s opacity 0.2s;
+  transition-delay: 0.2s;
+}
+.is-open > .modal-dialog {
+  opacity: 1;
+  transform: translateY(0);
+}
+.modal-image {
+  background-color: #ebebeb;
+  width: 60%;
+  text-align: center;
+  padding: 50px;
+}
+.modal-info {
+  padding: 50px 46px;
+  width: 40%;
+}
+.modal-title {
+  font-family: 'Bebas Neue', serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  margin-bottom: 25px;
+}
+.flat-list {
+  margin-top: 55px;
+}
+.flat-item {
+  margin-bottom: 10px;
+}
+.flat-link {
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--bg-header);
+}
+.flat-link:hover{
+  color: var(--border-color);
+  text-decoration: underline;
+}
+.modal-alert {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: var(--bg-header);
+  margin-top: 56px;
+}
+.modal-close-button {
+  position: absolute;
+  top: 38px;
+  right: 27px;
+  background-color: var(--color-nav-link);
+}
+
+
+
 
 /**footer***/
 .footer {
